@@ -1731,10 +1731,12 @@ footer {
   h2 { font-size: 2.2rem; }
   
   #navbar {
-    height: 70px;
-    background: var(--bg-navbar);
-    backdrop-filter: blur(var(--glass-blur));
-    border-color: var(--border-color);
+    height: 70px !important;
+    background: var(--bg-navbar) !important;
+    backdrop-filter: blur(var(--glass-blur)) !important;
+    border-color: var(--border-color) !important;
+    animation: none !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
   }
   
   .mobile-toggle {

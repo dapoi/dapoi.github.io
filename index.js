@@ -89,6 +89,16 @@ function initScrollAnimationsFallback() {
       const scrollRange = 100;
 
       window.addEventListener('scroll', () => {
+        // Disable on mobile/tablet screens to prevent conflict with fixed height
+        if (window.innerWidth <= 768) {
+          navbar.style.height = '';
+          navbar.style.background = '';
+          navbar.style.backdropFilter = '';
+          navbar.style.borderColor = '';
+          navbar.style.boxShadow = '';
+          return;
+        }
+
         const scrollY = window.scrollY;
         const percent = Math.min(1, scrollY / scrollRange);
         
