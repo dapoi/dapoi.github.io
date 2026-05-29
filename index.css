@@ -1312,6 +1312,7 @@ body.light-theme .timeline-content:hover {
   padding: 100px 0;
   background: #0b0c10;
   border-top: 1px solid var(--border-color);
+  overflow: hidden;
 }
 
 body.light-theme .contact-section {
@@ -1376,6 +1377,7 @@ body.light-theme .channel-card {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  min-width: 0; /* Enable flex-shrink overflow fix */
 }
 
 .channel-label {
@@ -1719,6 +1721,11 @@ footer {
 @media (max-width: 768px) {
   h1 { font-size: 3rem; }
   h2 { font-size: 2.2rem; }
+  
+  .channel-card {
+    padding: 1.25rem 1.5rem !important;
+    gap: 1rem !important;
+  }
   
   #navbar {
     height: 70px !important;
