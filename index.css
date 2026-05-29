@@ -102,16 +102,30 @@ body {
   transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Prevent Material Symbols ligature text from spilling/showing during slow font loading */
-.material-symbols-outlined {
-  display: inline-block;
+/* Inline SVG icon styles (instantly loading & highly scalable) */
+.icon-svg {
   width: 24px;
   height: 24px;
-  max-width: 24px;
-  max-height: 24px;
-  overflow: hidden;
-  white-space: nowrap;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: inline-block;
   vertical-align: middle;
+  transition: var(--transition-fast);
+}
+
+.channel-arrow {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: inline-block;
+  transition: var(--transition-fast);
 }
 
 /* Custom Scrollbar */
@@ -1877,7 +1891,8 @@ footer {
   
   .channel-arrow {
     position: static !important;
-    font-size: 1.15rem !important;
+    width: 18px !important;
+    height: 18px !important;
   }
   
   .channel-value {
