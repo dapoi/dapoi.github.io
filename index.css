@@ -1395,12 +1395,8 @@ body.light-theme .channel-card {
   transition: var(--transition-fast);
 }
 
-.channel-icon-wrapper span {
-  font-size: 1.6rem;
-}
-
-.email-card .channel-icon-wrapper span { color: var(--accent-teal); }
-.phone-card .channel-icon-wrapper span { color: var(--accent-android); }
+.email-card .channel-icon-wrapper { color: var(--accent-teal); }
+.phone-card .channel-icon-wrapper { color: var(--accent-android); }
 .github-card .channel-icon-wrapper { color: var(--accent-compose); }
 .linkedin-card .channel-icon-wrapper { color: var(--accent-blue); }
 
