@@ -79,52 +79,8 @@ function initMobileNavigation() {
 function initScrollAnimationsFallback() {
   const isScrollTimelineSupported = CSS.supports('(animation-timeline: scroll()) and (animation-range: 0% 100%)');
 
-  // 1. Navigation Header Shrink JS Fallback
+  // Scroll Progress Bar JS Fallback
   if (!isScrollTimelineSupported) {
-    const navbar = document.getElementById('navbar');
-    
-    if (navbar) {
-      const initialHeight = 100;
-      const finalHeight = 70;
-      const scrollRange = 100;
-
-      window.addEventListener('scroll', () => {
-        // Disable on mobile/tablet screens to prevent conflict with fixed height
-        if (window.innerWidth <= 768) {
-          navbar.style.height = '';
-          navbar.style.background = '';
-          navbar.style.backdropFilter = '';
-          navbar.style.borderColor = '';
-          navbar.style.boxShadow = '';
-          return;
-        }
-
-        const scrollY = window.scrollY;
-        const percent = Math.min(1, scrollY / scrollRange);
-        
-        if (percent > 0) {
-          navbar.style.height = `${initialHeight - (initialHeight - finalHeight) * percent}px`;
-          const isLight = document.body.classList.contains('light-theme');
-          const bgOpacity = 0.55 + 0.3 * percent;
-          const bgValue = isLight ? `rgba(244, 246, 250, ${bgOpacity})` : `rgba(8, 9, 13, ${bgOpacity})`;
-          const borderOpacity = 0.08 * percent;
-          const borderValue = isLight ? `rgba(0, 0, 0, ${borderOpacity})` : `rgba(255, 255, 255, ${borderOpacity})`;
-
-          navbar.style.background = bgValue;
-          navbar.style.backdropFilter = `blur(16px)`;
-          navbar.style.borderColor = borderValue;
-          navbar.style.boxShadow = `0 10px 30px rgba(0, 0, 0, ${0.15 * percent})`;
-        } else {
-          navbar.style.height = `${initialHeight}px`;
-          navbar.style.background = 'transparent';
-          navbar.style.backdropFilter = 'none';
-          navbar.style.borderColor = 'transparent';
-          navbar.style.boxShadow = 'none';
-        }
-      });
-    }
-
-    // Scroll Progress Bar JS Fallback
     const progressBar = document.getElementById('scroll-progress');
     if (progressBar) {
       window.addEventListener('scroll', () => {

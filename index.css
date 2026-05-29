@@ -88,10 +88,14 @@ html {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-sans);
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
@@ -191,9 +195,12 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 80px;
   z-index: 900;
-  border-bottom: 1px solid transparent;
+  background: var(--bg-navbar);
+  backdrop-filter: blur(var(--glass-blur));
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: var(--transition-smooth);
   display: flex;
   align-items: center;
@@ -341,24 +348,7 @@ body.light-theme .theme-toggle-btn .dark-icon {
   transition: var(--transition-fast);
 }
 
-/* Shrinking Header Animation via Scroll-driven Timeline */
-@supports (animation-timeline: scroll()) {
-  @keyframes shrink-header {
-    to {
-      height: 70px;
-      background: var(--bg-navbar);
-      backdrop-filter: blur(var(--glass-blur));
-      border-color: var(--border-color);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    }
-  }
-  
-  #navbar {
-    animation: shrink-header auto linear both;
-    animation-timeline: scroll(block root);
-    animation-range: 0px 100px;
-  }
-}
+
 
 /* ==========================================================================
    HERO SECTION
@@ -581,6 +571,7 @@ body.light-theme .logo-background-halo {
   padding: 100px 0;
   background: linear-gradient(180deg, var(--bg-primary) 0%, #0c0e15 100%);
   border-top: 1px solid var(--border-color);
+  overflow: hidden;
 }
 
 body.light-theme .about-section {
@@ -669,8 +660,7 @@ body.light-theme .about-photo-wrapper::before {
   z-index: 1;
   transition: var(--transition-smooth);
   filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.55)) drop-shadow(0 5px 15px rgba(0, 229, 255, 0.2));
-  -webkit-mask-image: radial-gradient(42% 52% at 50% 42%, rgba(0,0,0,1) 82%, rgba(0,0,0,0) 100%);
-  mask-image: radial-gradient(42% 52% at 50% 42%, rgba(0,0,0,1) 82%, rgba(0,0,0,0) 100%);
+  border-radius: 50%;
 }
 
 body.light-theme .about-photo {
