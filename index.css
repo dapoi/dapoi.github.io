@@ -1826,20 +1826,35 @@ footer {
   }
   
   .channel-card {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    padding: 1.5rem !important;
-    gap: 1.25rem !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    padding: 1rem 1.25rem !important;
+    gap: 0.75rem !important;
+  }
+  
+  .channel-icon-wrapper {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+  }
+  
+  .channel-icon-wrapper span, 
+  .channel-icon-wrapper svg {
+    font-size: 1.25rem !important;
+    width: 18px !important;
+    height: 18px !important;
   }
   
   .channel-arrow {
-    position: absolute !important;
-    top: 1.5rem !important;
-    right: 1.5rem !important;
+    position: static !important;
+    font-size: 1.15rem !important;
   }
   
   .channel-value {
-    font-size: 0.95rem !important;
-    word-break: break-word !important;
+    font-size: 0.78rem !important;
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
 }
