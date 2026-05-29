@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Luthfi Daffa Prabowo | Senior Android Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Luthfi Daffa Prabowo, a Senior Android Developer with 5+ years of experience specializing in Jetpack Compose, Kotlin, Clean Architecture, and high-performance banking and media mobile applications.">
+  <meta name="keywords" content="Android Developer, Luthfi Daffa Prabowo, Kotlin, Jetpack Compose, Mobile Engineer, Wondr by BNI, Blu by BCA Digital, Indonesia, Bekasi">
+  <meta name="author" content="Luthfi Daffa Prabowo">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Luthfi Daffa Prabowo | Senior Android Developer">
+  <meta property="og:description" content="Crafting fluid, high-performance native Android experiences serving millions of fintech and media users.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- Header / Navigation -->
+  <header id="navbar" class="header-shrink">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="nav-logo-link">
+        <span class="logo-accent">&lt;</span>LuthfiDaffa<span class="logo-accent">.dev /&gt;</span>
+      </a>
+      
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="#about" class="nav-link" id="nav-about">About</a>
+        <a href="#architecture" class="nav-link" id="nav-arch">Architecture</a>
+        <a href="#projects" class="nav-link" id="nav-proj">Projects</a>
+        <a href="#experience" class="nav-link" id="nav-exp">Experience</a>
+        <a href="#contact" class="nav-link nav-contact-btn" id="nav-contact">Get in Touch</a>
+      </nav>
+      
+      <!-- Theme Switcher & Mobile Nav Toggle -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme">
+          <span class="material-symbols-outlined light-icon">light_mode</span>
+          <span class="material-symbols-outlined dark-icon">dark_mode</span>
+        </button>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" id="mobile-menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-background-glow"></div>
+      <div class="container hero-container">
+        <div class="hero-text-content reveal-on-scroll">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Senior Android Developer
+          </div>
+          <h1>Crafting Fluid <br><span class="gradient-text">Native Experiences</span></h1>
+          <p class="hero-lead">
+            I build high-performance, production-grade Android apps serving millions of users across <strong>FinTech</strong> and <strong>Media</strong> sectors using <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>, and <strong>Clean Architecture</strong>.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" id="btn-view-work">
+              View Projects
+              <span class="material-symbols-outlined">arrow_outward</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="btn-let-talk">Contact Me</a>
+          </div>
+        </div>
+        
+        <!-- Glowing 3D Glassmorphic Android Robot SVG Showcase -->
+        <div class="hero-logo-container reveal-on-scroll">
+          <div class="android-logo-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="android-robot-svg">
+              <defs>
+                <linearGradient id="android-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="var(--accent-teal)" />
+                  <stop offset="100%" stop-color="var(--accent-android)" />
+                </linearGradient>
+              </defs>
+              <g fill="url(#android-grad)">
+                <!-- Antennas -->
+                <rect x="76" y="24" width="8" height="30" rx="4" transform="rotate(-30 80 39)" />
+                <rect x="172" y="24" width="8" height="30" rx="4" transform="rotate(30 176 39)" />
+                
+                <!-- Arms -->
+                <rect x="28" y="98" width="18" height="74" rx="9" />
+                <rect x="210" y="98" width="18" height="74" rx="9" />
+                
+                <!-- Head -->
+                <path d="M 64 90 A 64 64 0 0 1 192 90 Z" />
+                
+                <!-- Eyes -->
+                <circle cx="102" cy="66" r="6" fill="var(--bg-primary)" class="android-eye" />
+                <circle cx="154" cy="66" r="6" fill="var(--bg-primary)" class="android-eye" />
+                
+                <!-- Body -->
+                <path d="M 64 96 h 128 a 6 6 0 0 1 6 6 v 74 a 16 16 0 0 1 -16 16 H 74 a 16 16 0 0 1 -16 -16 v -74 a 6 6 0 0 1 6 -6 Z" />
+                
+                <!-- Legs -->
+                <rect x="88" y="192" width="18" height="42" rx="9" />
+                <rect x="150" y="192" width="18" height="42" rx="9" />
+              </g>
+            </svg>
+          </div>
+          <div class="logo-background-halo"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">&lt; / ABOUT ME &gt;</span>
+          <h2>Craftsmanship in Mobile Code</h2>
+          <p class="section-subtitle">Combining 5+ years of scaling banking systems and media streaming applications with robust mobile patterns.</p>
+        </div>
+        
+        <!-- Bio and Photo Grid -->
+        <div class="about-bio-grid">
+          <!-- Photo Column -->
+          <div class="about-photo-column reveal-on-scroll">
+            <div class="about-photo-wrapper">
+              <img src="assets/images/profile.png" alt="Luthfi Daffa Prabowo" class="about-photo" onerror="this.style.display='none'; document.getElementById('profile-avatar-fallback').style.display='flex';">
+              <div id="profile-avatar-fallback" class="avatar-fallback" style="display: none;">
+                <span>LD</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Philosophy Column -->
+          <div class="about-profile reveal-on-scroll">
+            <h3>Philosophy</h3>
+            <p>
+              My goal is to construct fluid mobile ecosystems that maintain high responsiveness under load. As a developer having delivered apps serving millions of active users in Indonesia (such as BNI, BCA Digital, MNC, and Harian Kompas), I design architectures that minimize main-thread bottlenecks, scale seamlessly, and optimize memory budgets.
+            </p>
+            <p>
+              I leverage Kotlin Flow and Coroutines for clean concurrency, modularize codebases to reduce compile times, and design beautiful, responsive UIs with Jetpack Compose adhering to modern design principles.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Tech Stack section -->
+        <div class="about-skills-section">
+          <h3>Core Technical Competencies</h3>
+          <div class="skills-grid">
+            <!-- Card 1: Core Languages & Async -->
+            <div class="skill-card reveal-on-scroll">
+              <div class="skill-icon-wrapper purple-glow">
+                <span class="material-symbols-outlined">terminal</span>
+              </div>
+              <h4>Languages & Asynchronous</h4>
+              <p>Kotlin, Java, Coroutines, Kotlin Flows, LiveData, RxJava. Expert at managing parallel data streams and asynchronous caching pipelines.</p>
+            </div>
+            
+            <!-- Card 2: UI & UX Ecosystem -->
+            <div class="skill-card reveal-on-scroll">
+              <div class="skill-icon-wrapper green-glow">
+                <span class="material-symbols-outlined">palette</span>
+              </div>
+              <h4>UI / Jetpack Compose</h4>
+              <p>Jetpack Compose, XML Layouts, Material Design 3, ExoPlayer, Custom Canvas, Custom Layouts, Navigation Component.</p>
+            </div>
+            
+            <!-- Card 3: Architecture & Security -->
+            <div class="skill-card reveal-on-scroll">
+              <div class="skill-icon-wrapper teal-glow">
+                <span class="material-symbols-outlined">layers</span>
+              </div>
+              <h4>Architecture & Security</h4>
+              <p>Clean Architecture, Modularization, MVVM, MVI, Hilt, Room, WorkManager, Data Encryption, Biometric Auth, ProGuard/R8.</p>
+            </div>
+            
+            <!-- Card 4: Networking & Tools -->
+            <div class="skill-card reveal-on-scroll">
+              <div class="skill-icon-wrapper blue-glow">
+                <span class="material-symbols-outlined">database</span>
+              </div>
+              <h4>Networking & DevOps</h4>
+              <p>Retrofit, Ktor, OkHttp, RESTful APIs, Git, Firebase Crashlytics, GitLab CI/CD, Gradle, NFC/Tap to Phone Payments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE SECTION -->
+    <section id="architecture" class="arch-section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">&lt; / ARCHITECTURE &gt;</span>
+          <h2>Robust Architectural Blueprints</h2>
+          <p class="section-subtitle">How I structure enterprise Android modules using Clean Architecture principles to guarantee isolation of concerns, testability, and extreme scalability.</p>
+        </div>
+        
+        <div class="architecture-grid">
+          <!-- Layer 1: UI Presentation Layer -->
+          <div class="arch-card reveal-on-scroll">
+            <div class="arch-header">
+              <div class="arch-layer-badge purple-badge">UI Layer</div>
+              <h3>Presentation</h3>
+            </div>
+            <p class="arch-body">
+              Responsible for layout rendering and state management. Composables observe immutable state flows released by ViewModels. Dispatches user actions as strict intents, avoiding data logic context entirely.
+            </p>
+            <div class="arch-tech">
+              <span class="chip">Jetpack Compose</span>
+              <span class="chip">StateFlow</span>
+              <span class="chip">MVI / MVVM</span>
+              <span class="chip">Hilt ViewModels</span>
+            </div>
+          </div>
+          
+          <!-- Layer 2: Domain Layer -->
+          <div class="arch-card reveal-on-scroll">
+            <div class="arch-header">
+              <div class="arch-layer-badge teal-badge">Domain Layer</div>
+              <h3>Core Business Core</h3>
+            </div>
+            <p class="arch-body">
+              The kernel of the app modules. Formulated in pure Kotlin and completely isolated from databases, network routers, or OS APIs. Holds business models, core rules, and repository interfaces inverting outer bounds.
+            </p>
+            <div class="arch-tech">
+              <span class="chip">Pure UseCases</span>
+              <span class="chip">Business Entities</span>
+              <span class="chip">Dependency Inversion</span>
+              <span class="chip">Coroutines</span>
+            </div>
+          </div>
+          
+          <!-- Layer 3: Data Layer -->
+          <div class="arch-card reveal-on-scroll">
+            <div class="arch-header">
+              <div class="arch-layer-badge green-badge">Data Layer</div>
+              <h3>Infrastructure</h3>
+            </div>
+            <p class="arch-body">
+              Coordinates all state persistence. Manages integration with network endpoints (Retrofit/Ktor clients) and localized databases (Room SQLite). Governs caching algorithms and asynchronous Sync routines.
+            </p>
+            <div class="arch-tech">
+              <span class="chip">Room Database</span>
+              <span class="chip">Retrofit / OkHttp</span>
+              <span class="chip">WorkManager</span>
+              <span class="chip">DataStore</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">&lt; / FEATURED PROJECTS &gt;</span>
+          <h2>Crafted Mobile Environments</h2>
+          <p class="section-subtitle">A showcase of production-grade Android apps built for millions of active users and digital banking transactions.</p>
+        </div>
+        
+        <div class="projects-grid">
+          <!-- Project 1: Wondr by BNI -->
+          <div class="project-card reveal-on-scroll">
+            <a href="https://play.google.com/store/apps/details?id=id.bni.wondr" target="_blank" rel="noopener noreferrer" class="project-image-link">
+              <div class="project-image-wrapper">
+                <img src="assets/images/wondr.webp" alt="Wondr by BNI App Screenshot" class="project-image" id="img-project-wondr">
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag-chip">Digital Banking / Payments</span>
+              </div>
+              <h3>
+                <a href="https://play.google.com/store/apps/details?id=id.bni.wondr" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                  Wondr by BNI <span class="material-symbols-outlined">arrow_outward</span>
+                </a>
+              </h3>
+              <p>Next-generation super banking app built completely from scratch serving millions of customers. Established initial project modular structures and delivered advanced payment systems including QR Scan, NFC Tap to Phone, and TapCash.</p>
+              <div class="project-tech">
+                <span class="chip">Jetpack Compose</span>
+                <span class="chip">Kotlin Flow</span>
+                <span class="chip">Hilt</span>
+                <span class="chip">NFC Payments</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 2: Blu by BCA Digital -->
+          <div class="project-card reveal-on-scroll">
+            <a href="https://play.google.com/store/apps/details?id=com.bcadigital.blu" target="_blank" rel="noopener noreferrer" class="project-image-link">
+              <div class="project-image-wrapper">
+                <img src="assets/images/blu.webp" alt="Blu by BCA Digital App Screenshot" class="project-image" id="img-project-blu">
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag-chip">FinTech / Lending</span>
+              </div>
+              <h3>
+                <a href="https://play.google.com/store/apps/details?id=com.bcadigital.blu" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                  Blu by BCA Digital <span class="material-symbols-outlined">arrow_outward</span>
+                </a>
+              </h3>
+              <p>Mobile-only digital banking platform by BCA Digital. Developed lending features including loan simulation calculators, credit limit evaluations, repayment grids, and memory profile tuning to guarantee a minimum crash rate.</p>
+              <div class="project-tech">
+                <span class="chip">Clean Architecture</span>
+                <span class="chip">Retrofit API</span>
+                <span class="chip">Coroutines</span>
+                <span class="chip">Memory Profiling</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Vision+ -->
+          <div class="project-card reveal-on-scroll">
+            <a href="https://play.google.com/store/apps/details?id=com.zte.iptvclient.android.idmnc" target="_blank" rel="noopener noreferrer" class="project-image-link">
+              <div class="project-image-wrapper">
+                <img src="assets/images/visionplus.webp" alt="Vision+ App Screenshot" class="project-image" id="img-project-visionplus">
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag-chip">Media / Streaming / VOD</span>
+              </div>
+              <h3>
+                <a href="https://play.google.com/store/apps/details?id=com.zte.iptvclient.android.idmnc" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                  Vision+ <span class="material-symbols-outlined">arrow_outward</span>
+                </a>
+              </h3>
+              <p>Premium entertainment streaming platform offering sports, VOD, original series, and international content for millions of users. Engineered ExoPlayer core adaptive streams and subscriptions paywall gates.</p>
+              <div class="project-tech">
+                <span class="chip">Kotlin</span>
+                <span class="chip">ExoPlayer</span>
+                <span class="chip">Adaptive Bitrates</span>
+                <span class="chip">Retrofit</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Kompas.id -->
+          <div class="project-card reveal-on-scroll">
+            <a href="https://play.google.com/store/apps/details?id=id.kompas.app&hl=en" target="_blank" rel="noopener noreferrer" class="project-image-link">
+              <div class="project-image-wrapper">
+                <img src="assets/images/kompas.webp" alt="Kompas.id App Screenshot" class="project-image" id="img-project-kompas">
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag-chip">Media / news</span>
+              </div>
+              <h3>
+                <a href="https://play.google.com/store/apps/details?id=id.kompas.app&hl=en" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                  Kompas.id <span class="material-symbols-outlined">arrow_outward</span>
+                </a>
+              </h3>
+              <p>Official mobile app of Harian Kompas news client. Shipped premium news features, implemented offline cache reads, bookmarks, and optimized application stability, reducing crash rates by 10%.</p>
+              <div class="project-tech">
+                <span class="chip">Kotlin</span>
+                <span class="chip">MVVM</span>
+                <span class="chip">Firebase Crashlytics</span>
+                <span class="chip">Offline Reading</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 5: MEVER (Media Saver) -->
+          <div class="project-card reveal-on-scroll">
+            <a href="https://play.google.com/store/apps/details?id=com.dapascript.mever" target="_blank" rel="noopener noreferrer" class="project-image-link">
+              <div class="project-image-wrapper">
+                <img src="assets/images/mever.webp" alt="MEVER App Screenshot" class="project-image" id="img-project-mever">
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag-chip">Utility / AI / Personal</span>
+              </div>
+              <h3>
+                <a href="https://play.google.com/store/apps/details?id=com.dapascript.mever" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                  MEVER: Media Saver & AI <span class="material-symbols-outlined">arrow_outward</span>
+                </a>
+              </h3>
+              <p>All-in-one media downloader with localized vault storage and dynamic AI image generation API integration. Reached 10,000+ monthly active users organically on Google Play. Designed and maintained as a solo developer.</p>
+              <div class="project-tech">
+                <span class="chip">Jetpack Compose</span>
+                <span class="chip">Room DB</span>
+                <span class="chip">AI Generation API</span>
+                <span class="chip">Solo Dev</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="exp-section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">&lt; / EXPERIENCE &gt;</span>
+          <h2>The Timeline of Growth</h2>
+          <p class="section-subtitle">Tracing a history of scaling robust code bases and engineering products.</p>
+        </div>
+        
+        <!-- Timeline Component -->
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Nov 2025 - Present</div>
+            <div class="timeline-content">
+              <h4>Android Developer</h4>
+              <span class="timeline-company">Akar Inti Teknologi | Jakarta</span>
+              <p>
+                Developed and enhanced lending modules for the mobile digital banking platform <strong>Blu by BCA Digital</strong>. Designed clean architectural components, integrated loan calculation REST APIs, and performed memory optimizations to minimize memory overhead and keep crash rates below critical bounds.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Oct 2023 - Nov 2025</div>
+            <div class="timeline-content">
+              <h4>Android Developer</h4>
+              <span class="timeline-company">Bank Negara Indonesia (BNI) | Jakarta</span>
+              <p>
+                Key contributor in developing <strong>Wondr by BNI</strong> next-gen banking app from scratch using Jetpack Compose, Hilt, and Kotlin Flow. Built QR scan, TapCash, and NFC Tap to Phone payment features. Led Android modular architecture structures and onboarded/mentored 6 junior engineers.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Oct 2022 - Oct 2023</div>
+            <div class="timeline-content">
+              <h4>Android Developer</h4>
+              <span class="timeline-company">MNC Group | Jakarta</span>
+              <p>
+                Contributed to <strong>Vision+</strong>, an entertainment streaming client with millions of users. Engineered VOD and live sports video playback streams utilizing <strong>ExoPlayer</strong> (HLS/DASH adaptive bitrates). Developed subscription modules and paywall APIs end-to-end.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Aug 2021 - Feb 2022</div>
+            <div class="timeline-content">
+              <h4>Android Developer</h4>
+              <span class="timeline-company">Harian Kompas | Jakarta</span>
+              <p>
+                Shipped premium news features for <strong>Kompas.id</strong>. Maintained high stability, reducing crash rates by over 10% through memory-leak analysis and performance tuning with Firebase Crashlytics. Modernized layouts to Material Design to improve user retention.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">&lt; / CONTACT &gt;</span>
+          <h2>Let's build something exceptional</h2>
+          <p class="section-subtitle">Want to collaborate, talk architecture, or discuss a senior Android opportunity? Drop a message below or reach out via direct channels.</p>
+        </div>
+        
+        <!-- Highly Highlighted Direct Contact Cards -->
+        <div class="contact-channels">
+          <a href="mailto:luthfidaffaprabowo@gmail.com" class="channel-card email-card reveal-on-scroll">
+            <div class="channel-icon-wrapper">
+              <span class="material-symbols-outlined">mail</span>
+            </div>
+            <div class="channel-info">
+              <span class="channel-label">Direct Email</span>
+              <span class="channel-value">luthfidaffaprabowo@gmail.com</span>
+            </div>
+            <span class="material-symbols-outlined channel-arrow">arrow_forward</span>
+          </a>
+          
+          <a href="https://wa.me/6287771276214" target="_blank" rel="noopener noreferrer" class="channel-card phone-card reveal-on-scroll">
+            <div class="channel-icon-wrapper">
+              <span class="material-symbols-outlined">call</span>
+            </div>
+            <div class="channel-info">
+              <span class="channel-label">Direct Phone / WhatsApp</span>
+              <span class="channel-value">+62 877 7127 6214</span>
+            </div>
+            <span class="material-symbols-outlined channel-arrow">arrow_forward</span>
+          </a>
+
+          <a href="https://github.com/dapoi" target="_blank" rel="noopener noreferrer" class="channel-card github-card reveal-on-scroll">
+            <div class="channel-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </div>
+            <div class="channel-info">
+              <span class="channel-label">GitHub Profile</span>
+              <span class="channel-value">Dapoi</span>
+            </div>
+            <span class="material-symbols-outlined channel-arrow">arrow_forward</span>
+          </a>
+
+          <a href="https://linkedin.com/in/luthfi-daffa-prabowo" target="_blank" rel="noopener noreferrer" class="channel-card linkedin-card reveal-on-scroll">
+            <div class="channel-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-.779s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </div>
+            <div class="channel-info">
+              <span class="channel-label">LinkedIn Profile</span>
+              <span class="channel-value">Luthfi Daffa Prabowo</span>
+            </div>
+            <span class="material-symbols-outlined channel-arrow">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-container">
+      <p class="footer-copy">&copy; 2026 Luthfi Daffa Prabowo. Bekasi, Indonesia.</p>
+    </div>
+  </footer>
+
+  <!-- Javascript Logic -->
+  <script src="index.js"></script>
+</body>
+</html>
