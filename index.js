@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initMobileNavigation();
   initScrollAnimationsFallback();
+  initClickRipples();
 });
 
 /* ==========================================================================
@@ -120,6 +121,53 @@ function initScrollAnimationsFallback() {
 
   revealElements.forEach(el => {
     revealObserver.observe(el);
+  });
+}
+
+/* ==========================================================================
+   PREMIUM MATERIAL CLICK RIPPLE CONTROLLER (UNIFIED POINTER EVENTS)
+   ========================================================================== */
+function initClickRipples() {
+  const interactiveSelectors = [
+    '.btn',
+    '.channel-card',
+    '.project-card',
+    '.skill-card',
+    '.theme-toggle-btn'
+  ].join(', ');
+
+  document.addEventListener('pointerdown', (e) => {
+    // Only trigger on left clicks or touches
+    if (e.button !== 0 && e.pointerType === 'mouse') return;
+
+    const target = e.target.closest(interactiveSelectors);
+    if (!target) return;
+
+    // Create ripple element
+    const ripple = document.createElement('span');
+    ripple.className = 'click-ripple';
+
+    // Calculate click coordinates relative to target
+    const rect = target.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    // Calculate maximum distance to corners to cover the entire shape
+    const diameter = Math.max(rect.width, rect.height) * 2.2;
+    const radius = diameter / 2;
+
+    ripple.style.width = `${diameter}px`;
+    ripple.style.height = `${diameter}px`;
+    ripple.style.left = `${x - radius}px`;
+    ripple.style.top = `${y - radius}px`;
+
+    // Append ripple to target
+    target.appendChild(ripple);
+
+    // Fade out and remove cleanly on animation end
+    ripple.addEventListener('animationend', () => {
+      ripple.remove();
+    });
   });
 }
 

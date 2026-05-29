@@ -1407,7 +1407,6 @@ body.light-theme .channel-card {
 .channel-icon-wrapper svg {
   width: 24px;
   height: 24px;
-  fill: currentColor;
   transition: var(--transition-fast);
 }
 
@@ -1909,3 +1908,49 @@ footer {
     text-overflow: ellipsis !important;
   }
 }
+
+/* ==========================================================================
+   PREMIUM CONFORMING CLICK RIPPLE STYLES
+   ========================================================================== */
+.btn,
+.channel-card,
+.project-card,
+.skill-card,
+.theme-toggle-btn {
+  position: relative !important;
+  overflow: hidden !important;
+  /* Ultimate Webkit hack to force perfect border-radius clipping under transform scale animations */
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  isolation: isolate;
+}
+
+.click-ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: clickRippleAnim 0.6s cubic-bezier(0.1, 0.8, 0.3, 1);
+  background: rgba(255, 255, 255, 0.28);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Light theme ripple adaptation for beautiful contrast */
+body.light-theme .click-ripple {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+/* Custom ripple adjustment for buttons with high contrast backgrounds */
+.btn-primary .click-ripple {
+  background: rgba(255, 255, 255, 0.35);
+}
+body.light-theme .btn-primary .click-ripple {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes clickRippleAnim {
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
